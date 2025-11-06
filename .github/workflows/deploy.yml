@@ -37,6 +37,8 @@ jobs:
 
       - name: 设置 Pages
         uses: actions/configure-pages@v4
+        with:
+          enablement: true
 
       - name: 上传网站文件
         uses: actions/upload-pages-artifact@v3
