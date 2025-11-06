@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 生成的网站文件（通过 GitHub Actions 自动生成和部署）
+website/
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 环境变量文件（包含敏感信息）
+.env
+.env.local
+
+# 临时文件
+*.log
+*.tmp
+translate_single.py
+
+# 下载的原始内容（可选，如果不想提交原始文件）
+# content/
