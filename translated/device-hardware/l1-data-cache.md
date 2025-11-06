@@ -9,7 +9,9 @@ title: 什么是 L1 数据缓存？
 
 L1 数据缓存是[流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor)的私有内存。
 
-![H100 SM 的内部架构。L1 数据缓存以浅蓝色标示。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> HH100 SM 内部架构图。浅蓝色部分描绘的是 L1 数据缓存。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 每个 SM 将该内存分配给调度到其上的[线程组](/gpu-glossary/device-software/thread-block)。
 

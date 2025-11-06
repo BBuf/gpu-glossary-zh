@@ -9,7 +9,9 @@ title: 什么是 Tensor Core？
 
 Tensor Core 是一种 GPU [核心 (core)](/gpu-glossary/device-hardware/core)，能够通过单条指令对整个矩阵进行操作。
 
-![H100 SM 的内部架构。注意 Tensor Core 数量较少但尺寸更大。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> H100 SM 的内部架构。注意 Tensor Core 数量较少但尺寸更大。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 单条指令能操作更多数据可显著降低功耗需求，从而释放更高性能（参见 NVIDIA 首席科学家 Bill Dally 的 [这个演讲](https://youtu.be/kLiwvnr4L80?t=868)）。自 Volta 架构的[流式多处理器 (Streaming Multiprocessor, SM)](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture) 世代引入以来，Tensor Core 已成为在 NVIDIA GPU 上实现最高[算术吞吐量 (arithmetic throughput)](/gpu-glossary/perf/arithmetic-bandwidth) 的唯一途径 —— 其每秒浮点运算能力是 [CUDA 核心 (CUDA Core)](/gpu-glossary/device-hardware/cuda-core) 的 100 倍。
 
@@ -50,7 +52,9 @@ HMMA.1688.F32 R24, R14, R18, R24  // 4
 
 该程序将完整的 16×16 方阵乘法划分为四条独立指令，每条指令本身都是 16×8 矩阵与 8×8 矩阵的乘法。类似地，运行大规模矩阵乘法的程序必须将其工作分解为较小的矩阵乘法，就像我们正在剖析的 `mma_sync` 调用所执行的 16×16 方阵乘法。下文将逐步解析该程序。
 
-![Tensor Core MMA 在 C = A @ B 中的寄存器使用情况。R11、R17、R16 和 R18 寄存器分别用于指令 1、2、3 和 4。详见正文说明。](https://modal.com/_next/image?url=%2Fgpu-glossary%2Ftensor-core-mma.svg&w=1920&q=75)
+![](https://files.mdnice.com/user/59/eb83fc86-64ec-4b77-8a48-b7372090ac28.png)
+
+> Tensor Core MMA 在 C = A @ B 中的寄存器使用情况。R11、R17、R16 和 R18 寄存器分别用于指令 1、2、3 和 4。详见正文说明。
 
 前两条指令计算输入 `a`（来自 `R12`）的前八列与输入 `b`（来自 `R11` 和 `R17`）的前八行的矩阵乘法，生成存储在 `R20` 和 `R24` 中的 16×16 矩阵。这是一种"外积"：高瘦矩阵与矮宽矩阵相乘。（`RZ` 是一个特殊用途的"寄存器"，其值为 `Z`ero）。
 

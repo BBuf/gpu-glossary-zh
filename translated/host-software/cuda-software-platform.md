@@ -29,7 +29,9 @@ CUDA 软件平台是用于开发 CUDA 程序的一系列软件集合。虽然也
 [CUDA 驱动 API](/gpu-glossary/host-software/cuda-driver-api) 和
 [CUDA 运行时 API](/gpu-glossary/host-software/cuda-runtime-api)），如下图所示。
 
-![CUDA 工具包。改编自《Professional CUDA C Programming Guide》。](https://modal.com/_next/image?url=%2Fgpu-glossary%2Fcuda-toolkit.svg&w=1920&q=75)
+![](https://files.mdnice.com/user/59/36cbc43a-ccb6-4c7b-bc0b-fe92598b2847.png)
+
+> CUDA 工具包。改编自《Professional CUDA C Programming Guide》。
 
 在这些 API 之上构建的是用于为通用和特定领域构建优化
 [内核 (kernel)](/gpu-glossary/device-software/kernel) 的库，

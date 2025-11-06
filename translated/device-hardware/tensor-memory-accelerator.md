@@ -10,7 +10,9 @@ abbreviation: TMA
 
 张量内存加速器 (Tensor Memory Accelerator, TMA) 是 Hopper 和 Blackwell [架构](/gpu-glossary/device-hardware/streaming-multiprocessor-architecture) GPU 中的专用硬件，旨在加速对 [GPU 内存](/gpu-glossary/device-hardware/gpu-ram) 中多维数组的访问。
 
-![H100 [流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor) 的内部架构。注意位于 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) 底部、在四个子单元之间共享的张量内存加速器。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> H100 SM 的内部架构。注意位于 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) 底部、在四个子单元之间共享的张量内存加速器。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 TMA 将数据从 [全局内存](/gpu-glossary/device-software/global-memory)/[GPU 内存](/gpu-glossary/device-hardware/gpu-ram) 加载到 [共享内存](/gpu-glossary/device-software/shared-memory)/[L1 数据缓存](/gpu-glossary/device-hardware/l1-data-cache)，完全绕过了 [寄存器](/gpu-glossary/device-software/registers)/[寄存器文件](/gpu-glossary/device-hardware/register-file)。
 

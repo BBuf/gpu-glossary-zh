@@ -7,7 +7,10 @@
 title: 什么是 CUDA 线程块？
 ---
 
-![线程块是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 线程层次结构中的中间层级（左图）。一个线程块在单个 [流式多处理器 (Streaming Multiprocessor)](/gpu-glossary/device-hardware/streaming-multiprocessor) 上执行（右图，中间）。改编自 NVIDIA 的 [CUDA 复习：CUDA 编程模型](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/d34393a7-0643-432c-9439-fdb4a05c7115.png)
+
+> 线程块是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 线程层次结构中的中间层级（左图）。一个线程块在单个 [流式多处理器 (Streaming Multiprocessor)](/gpu-glossary/device-hardware/streaming-multiprocessor) 上执行（右图，中间）。改编自 NVIDIA 的 [CUDA 复习：CUDA 编程模型](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
+
 
 线程块是 [CUDA 编程模型 (CUDA programming model)](/gpu-glossary/device-software/cuda-programming-model) 的[线程层次结构 (thread hierarchy)](/gpu-glossary/device-software/thread-hierarchy) 中的一个层级，位于[网格 (grid)](/gpu-glossary/device-software/thread-block-grid) 之下但在[线程 (thread)](/gpu-glossary/device-software/thread) 之上。它是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中与 [PTX (Parallel Thread Execution)](/gpu-glossary/device-software/parallel-thread-execution)/[SASS (Streaming Assembler)](/gpu-glossary/device-software/streaming-assembler) 中具体的[协作线程阵列 (cooperative thread array)](/gpu-glossary/device-software/cooperative-thread-array) 相对应的抽象概念。
 

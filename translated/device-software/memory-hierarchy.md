@@ -7,7 +7,9 @@
 title: 什么是 CUDA 内存层次结构？
 ---
 
-![[共享内存 (Shared Memory)](/gpu-glossary/device-software/shared-memory) 和 [全局内存 (Global Memory)](/gpu-glossary/device-software/global-memory) 是 [CUDA 编程模型 (CUDA Programming Model)](/gpu-glossary/device-software/cuda-programming-model) 中的两个内存层次（左图），分别映射到 [L1 数据缓存 (L1 Data Cache)](/gpu-glossary/device-hardware/l1-data-cache) 和 [GPU 显存 (GPU RAM)](/gpu-glossary/device-hardware/gpu-ram)。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/2008d8ce-4c89-4547-8dbd-dcf001db7b42.png)
+
+> [共享内存 (Shared Memory)](/gpu-glossary/device-software/shared-memory) 和 [全局内存 (Global Memory)](/gpu-glossary/device-software/global-memory) 是 [CUDA 编程模型 (CUDA Programming Model)](/gpu-glossary/device-software/cuda-programming-model) 中的两个内存层次（左图），分别映射到 [L1 数据缓存 (L1 Data Cache)](/gpu-glossary/device-hardware/l1-data-cache) 和 [GPU 显存 (GPU RAM)](/gpu-glossary/device-hardware/gpu-ram)。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 作为 [CUDA 编程模型 (CUDA Programming Model)](/gpu-glossary/device-software/cuda-programming-model) 的一部分，[线程层次结构 (Thread Hierarchy)](/gpu-glossary/device-software/thread-hierarchy) 的每个级别都可以访问该级别中所有[线程 (Thread)](/gpu-glossary/device-software/thread) 共享的独立内存块：即"内存层次结构"。该内存可用于协调和通信，并由程序员（而非硬件或运行时）管理。
 

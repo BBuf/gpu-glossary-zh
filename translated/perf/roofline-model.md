@@ -9,7 +9,10 @@ title: 什么是屋顶线模型？
 
 屋顶线模型是一种简化的、可视化的性能模型，用于快速判断程序是受[内存带宽](/gpu-glossary/perf/memory-bandwidth)限制还是[算术带宽](/gpu-glossary/perf/arithmetic-bandwidth)限制。
 
-![[内核](/gpu-glossary/device-software/kernel)位于脊点左侧时受[内存子系统带宽限制](/gpu-glossary/perf/memory-bound)，位于脊点右侧时受[算术子系统带宽限制](/gpu-glossary/perf/compute-bound)。图表改编自提出屋顶线模型的[Williams、Waterman 和 Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。](../images/roofline-model.svg)
+![](https://files.mdnice.com/user/59/b10ef884-f730-494d-ac6c-d6a612cd7c97.png)
+
+> [内核](/gpu-glossary/device-software/kernel)位于脊点左侧时受[内存子系统带宽限制](/gpu-glossary/perf/memory-bound)，位于脊点右侧时受[算术子系统带宽限制](/gpu-glossary/perf/compute-bound)。图表改编自提出屋顶线模型的[Williams、Waterman 和 Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。
+
 
 在屋顶线模型中，两个硬件相关的"屋顶"为可能达到的性能设定了"上限"：
 

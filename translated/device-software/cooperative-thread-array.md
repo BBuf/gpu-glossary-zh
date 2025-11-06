@@ -7,7 +7,9 @@
 title: 什么是协作线程阵列？
 ---
 
-![协作线程阵列对应于 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中线程块层次结构的[线程块](/gpu-glossary/device-software/thread-block)级别。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/5a061b80-aaa2-433f-8356-9d4cc9e37c2d.png)
+
+> 协作线程阵列对应于 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中线程块层次结构的[线程块](/gpu-glossary/device-software/thread-block)级别。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 协作线程阵列 (Cooperative Thread Array, CTA) 是被调度到同一个[流式多处理器 (Streaming Multiprocessor, SM)](/gpu-glossary/device-hardware/streaming-multiprocessor) 上的线程集合。CTA 是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中[线程块](/gpu-glossary/device-software/thread-block) 在 [PTX](/gpu-glossary/device-software/parallel-thread-execution)/[SASS](/gpu-glossary/device-software/streaming-assembler) 层面的实现。CTA 由一个或多个[线程束 (warp)](/gpu-glossary/device-software/warp) 组成。
 

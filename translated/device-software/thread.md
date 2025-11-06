@@ -7,7 +7,11 @@
 title: 什么是 CUDA 线程？
 ---
 
-![线程是线程组层次结构中的最低层级（顶部、左侧），并被映射到[流式多处理器](/gpu-glossary/device-hardware/streaming-multiprocessor)的[核心](/gpu-glossary/device-hardware/core)上。改编自 NVIDIA 的 [CUDA 复习：CUDA 编程模型](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+
+![](https://files.mdnice.com/user/59/e89a60c2-b91b-471e-a28a-3f62feddc41d.png)
+
+> 线程是线程组层次结构中的最低层级（顶部、左侧），并被映射到[流式多处理器](/gpu-glossary/device-hardware/streaming-multiprocessor)的[核心](/gpu-glossary/device-hardware/core)上。改编自 NVIDIA 的 [CUDA 复习：CUDA 编程模型](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
+
 
 _执行线程_（简称"线程"）是 GPU 编程的最低单位，是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 的[线程层次结构](/gpu-glossary/device-software/thread-hierarchy)的基础和原子单位。线程拥有自己的[寄存器](/gpu-glossary/device-software/registers)，但除此之外几乎没有其他资源。
 

@@ -7,7 +7,9 @@
 title: 什么是全局内存？
 ---
 
-![全局内存是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中[内存层次结构](/gpu-glossary/device-software/memory-hierarchy)的最高层级。它存储在 [GPU 显存](/gpu-glossary/device-hardware/gpu-ram)中。修改自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/17cf49c2-1c60-41d1-9790-6c7c3334eb35.png)
+
+> 全局内存是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中[内存层次结构](/gpu-glossary/device-software/memory-hierarchy)的最高层级。它存储在 [GPU 显存](/gpu-glossary/device-hardware/gpu-ram)中。修改自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 作为 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 的一部分，[线程层次结构](/gpu-glossary/device-software/thread-hierarchy) 的每个层级都可以访问 [内存层次结构](/gpu-glossary/device-software/memory-hierarchy) 中对应的内存。这些内存可用于协调和通信，并由程序员（而非硬件或运行时）管理。
 

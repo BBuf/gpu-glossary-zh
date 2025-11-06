@@ -7,7 +7,10 @@
 title: 什么是 GPU RAM？
 ---
 
-![在像 H100 这样的高性能数据中心 GPU 中，RAM 位于与处理器芯片相邻的芯片上。改编自维基百科关于[高带宽内存](https://en.wikipedia.org/wiki/High_Bandwidth_Memory)的页面。](../images/hbm-schematic.svg)
+
+![](https://files.mdnice.com/user/59/e3abd93c-91ad-4493-8ed0-00e32f3feeea.png)
+
+> 在像 H100 这样的高性能数据中心 GPU 中，RAM 位于与处理器芯片相邻的芯片上。改编自维基百科关于[高带宽内存](https://en.wikipedia.org/wiki/High_Bandwidth_Memory)的页面。]
 
 GPU 的底层存储器是一个大容量（数兆字节到数千兆字节）的存储空间，可被 GPU 的所有[流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor) 寻址。
 

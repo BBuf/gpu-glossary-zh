@@ -42,7 +42,9 @@ mov.u32 %r3, %tid.x;
 
 PTX 编程模型向程序员暴露了多个级别的并行性。这些级别通过 PTX 机器模型直接映射到硬件上，如下图所示。
 
-![PTX 机器模型。修改自 [PTX 文档](https://docs.nvidia.com/cuda/parallel-thread-execution/#ptx-machine-model)。](../images/ptx-machine-model.svg)
+![](https://files.mdnice.com/user/59/a69a0345-193d-4517-b730-4a462b239b84.png)
+
+> PTX 机器模型。修改自 [PTX 文档](https://docs.nvidia.com/cuda/parallel-thread-execution/#ptx-machine-model)。
 
 值得注意的是，在此机器模型中，多个处理器共享一个指令单元。虽然每个处理器运行一个[线程 (thread)](/gpu-glossary/device-software/thread)，但这些线程必须执行相同的指令——因此称为*并行*线程执行或 PTX。它们通过[共享内存 (shared memory)](/gpu-glossary/device-software/shared-memory) 相互协调，并通过私有[寄存器 (registers)](/gpu-glossary/device-software/registers) 产生不同的结果。
 

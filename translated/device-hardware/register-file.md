@@ -10,7 +10,10 @@ title: 什么是寄存器文件？
 
 [流式多处理器 (Streaming Multiprocessor)](/gpu-glossary/device-hardware/streaming-multiprocessor)的寄存器文件是在[计算核心 (core)](/gpu-glossary/device-hardware/core)进行数据操作期间的主要比特存储单元。
 
-![H100 SM 内部架构图。蓝色部分描绘的是寄存器文件。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> HH100 SM 内部架构图。蓝色部分描绘的是寄存器文件。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 与 CPU 中的寄存器类似，这些寄存器采用非常快速的内存技术制造，能够跟上计算[核心 (core)](/gpu-glossary/device-hardware/core)的处理速度，比[L1 数据缓存 (L1 data cache)](/gpu-glossary/device-hardware/l1-data-cache)快大约一个数量级。
 

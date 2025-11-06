@@ -9,7 +9,10 @@ title: 什么是性能瓶颈？
 
 瓶子的字面意义上的瓶颈限制了液体倒出的速率；而系统中隐喻的性能瓶颈则限制了任务完成的速率。
 
-![[屋顶线图](/gpu-glossary/perf/roofline-model) 像这样的图用于快速识别面向吞吐量系统中的性能瓶颈。改编自 [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。](../images/roofline-model.svg)
+![](https://files.mdnice.com/user/59/92984918-41ef-4f71-ac0f-8ff4c391615e.png)
+
+> [屋顶线图](/gpu-glossary/perf/roofline-model) 像这样的图用于快速识别面向吞吐量系统中的性能瓶颈。改编自 [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。
+
 
 瓶颈是性能优化的目标。教科书式的优化方法是：
 

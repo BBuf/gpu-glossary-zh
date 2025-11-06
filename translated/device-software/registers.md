@@ -7,7 +7,9 @@
 title: 什么是寄存器？
 ---
 
-![寄存器是[内存层次结构](/gpu-glossary/device-software/memory-hierarchy)中与单个[线程](/gpu-glossary/device-software/thread)相关联的内存（左图）。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/01fd1dd1-9924-4a8e-ab3b-7275250bcd13.png)
+
+> 寄存器是[内存层次结构](/gpu-glossary/device-software/memory-hierarchy)中与单个[线程](/gpu-glossary/device-software/thread)相关联的内存（左图）。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 在[内存层次结构](/gpu-glossary/device-software/memory-hierarchy)的最底层是寄存器，它们存储由单个[线程](/gpu-glossary/device-software/thread)操作的信息。
 

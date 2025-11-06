@@ -9,7 +9,9 @@ title: 什么是 CUDA 核心？
 
 CUDA 核心是执行标量算术指令的 GPU [核心](/gpu-glossary/device-hardware/core)。
 
-![H100 SM 的内部架构。CUDA 核心和张量核心以绿色显示。请注意张量核心尺寸更大且数量更少。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> H100 SM 的内部架构。CUDA 核心和张量核心以绿色显示。请注意张量核心尺寸更大且数量更少。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 它们与执行矩阵运算的[张量核心](/gpu-glossary/device-hardware/tensor-core)形成对比。
 

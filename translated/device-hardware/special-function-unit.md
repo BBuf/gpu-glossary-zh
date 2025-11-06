@@ -10,7 +10,9 @@ abbreviation: SFU
 
 特殊功能单元 (Special Function Units, SFU) 位于[流式多处理器 (Streaming Multiprocessors, SMs)](/gpu-glossary/device-hardware/streaming-multiprocessor)中，用于加速特定的算术运算。
 
-![H100 SM 的内部架构。特殊功能单元以褐红色显示，与[加载/存储单元 (Load/Store Units)](/gpu-glossary/device-hardware/load-store-unit)一起展示。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> H100 SM 的内部架构。特殊功能单元以褐红色显示，与[加载/存储单元 (Load/Store Units)](/gpu-glossary/device-hardware/load-store-unit)一起展示。修改自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 对于神经网络工作负载而言，最值得注意的是超越数学运算，例如 `exp`、`sin` 和 `cos`。
 

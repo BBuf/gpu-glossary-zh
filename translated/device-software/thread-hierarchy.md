@@ -7,7 +7,9 @@
 title: CUDA 线程层次结构是什么？
 ---
 
-![CUDA 编程模型的线程层次结构从单个线程到线程块再到线程块网格（左侧），映射到硬件上则从 CUDA 核心到流式多处理器 (SM) 再到整个 GPU（右侧）。改编自 NVIDIA 的《CUDA Refresher: The CUDA Programming Model》和 NVIDIA 《CUDA C++ Programming Guide》中的图表。](https://modal.com/_next/image?url=%2Fgpu-glossary%2Fcuda-programming-model.svg&w=1920&q=75)
+![](https://files.mdnice.com/user/59/ab0c7e8d-95bd-44af-ade5-680917a800c4.png)
+
+> CUDA 编程模型的线程层次结构从单个线程到线程块再到线程块网格（左侧），映射到硬件上则从 CUDA 核心到流式多处理器 (SM) 再到整个 GPU（右侧）。改编自 NVIDIA 的《CUDA Refresher: The CUDA Programming Model》和 NVIDIA 《CUDA C++ Programming Guide》中的图表。
 
 线程层次结构是 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 的关键抽象概念，与 [内存层次结构](/gpu-glossary/device-software/memory-hierarchy) 并列。它从单个线程到整个 GPU 设备，跨多个级别组织并行程序的执行。
 

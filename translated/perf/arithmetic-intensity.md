@@ -9,7 +9,10 @@ title: 什么是算术强度？
 
 算术强度是 [内核 (kernel)](/gpu-glossary/device-software/kernel) 中算术操作与内存操作的比率。
 
-![在 [屋顶线模型 (roofline model)](/gpu-glossary/perf/roofline-model) 中，操作/算术强度绘制在横轴上。图表改编自 [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。](../images/roofline-model.svg)
+![](https://files.mdnice.com/user/59/131ece1e-bc21-4782-8bf2-5d5d4bd21507.png)
+
+> 在 [屋顶线模型 (roofline model)](/gpu-glossary/perf/roofline-model) 中，操作/算术强度绘制在横轴上。图表改编自 [Williams, Waterman, and Patterson (2008)](https://people.eecs.berkeley.edu/~kubitron/cs252/handouts/papers/RooflineVyNoYellow.pdf)。
+
 
 高算术强度表明一个 [内核 (kernel)](/gpu-glossary/device-software/kernel) 每加载一个字节会执行许多算术操作。由于现代 GPU 中 [算术带宽 (arithmetic bandwidth)](/gpu-glossary/perf/arithmetic-bandwidth) 与 [内存带宽 (memory bandwidth)](/gpu-glossary/perf/memory-bandwidth) 之间的高比率，最高效的内核具有高算术强度。这意味着当缓解内存 [瓶颈 (bottleneck)](/gpu-glossary/perf/performance-bottleneck) 时，我们通常可以将工作从内存子系统转移到计算子系统，从而节省 [内存带宽 (memory bandwidth)](/gpu-glossary/perf/memory-bandwidth) 但增加算术单元的负载。
 

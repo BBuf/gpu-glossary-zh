@@ -7,7 +7,9 @@
 title: 什么是 CUDA 内核？
 ---
 
-![单个内核启动对应于 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中的 [线程块网格](/gpu-glossary/device-software/thread-block-grid)。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+![](https://files.mdnice.com/user/59/44f492a3-e177-4adc-90a0-c65a1ff38831.png)
+
+> 单个内核启动对应于 [CUDA 编程模型](/gpu-glossary/device-software/cuda-programming-model) 中的 [线程块网格](/gpu-glossary/device-software/thread-block-grid)。改编自 NVIDIA 的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和 NVIDIA [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 内核是程序员通常编写和组合的 [CUDA](/gpu-glossary/device-software/cuda-programming-model) 代码单元，类似于面向 CPU 的语言中的过程或函数。
 

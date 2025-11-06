@@ -11,7 +11,9 @@ CUDA 运行时 API (CUDA Runtime API) 封装了
 [CUDA 驱动 API](/gpu-glossary/host-software/cuda-driver-api)，并为相同功能提供了
 更高级别的 API。
 
-![CUDA 工具包。CUDA 运行时 API 封装了 CUDA 驱动 API，使其更适合应用程序编程。改编自《Professional CUDA C Programming Guide》。](https://modal.com/_next/image?url=%2Fgpu-glossary%2Fcuda-toolkit.svg&w=1920&q=75)
+![](https://files.mdnice.com/user/59/8a5a5606-71b8-47b0-88f4-3b35c2e5ecb1.png)
+
+> CUDA 工具包。CUDA 运行时 API 封装了 CUDA 驱动 API，使其更适合应用程序编程。改编自《Professional CUDA C Programming Guide》。
 
 通常更推荐使用运行时 API 而非
 [驱动 API](/gpu-glossary/host-software/cuda-driver-api)，因为它具有更好的人体工程学设计，

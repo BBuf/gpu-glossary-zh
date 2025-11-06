@@ -40,7 +40,10 @@ CUDA 编程模型中有三个关键抽象：
 执行和存储器的层次结构及其到
 [设备硬件](/gpu-glossary/device-hardware) 的映射总结在下图中。
 
-![左图：CUDA 编程模型的抽象线程组和存储器层次结构。右图：实现这些抽象概念的匹配硬件。修改自英伟达的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和英伟达 [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。](../images/cuda-programming-model.svg)
+
+![](https://files.mdnice.com/user/59/638bef81-5f7f-47e4-a1d2-8386be8ff0b0.png)
+
+> 左图：CUDA 编程模型的抽象线程组和存储器层次结构。右图：实现这些抽象概念的匹配硬件。修改自英伟达的 [CUDA Refresher: The CUDA Programming Model](https://developer.nvidia.com/blog/cuda-refresher-cuda-programming-model/) 和英伟达 [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html#programming-model) 中的图表。
 
 这三个抽象概念共同鼓励以一种能够随着 GPU 设备并行执行资源的扩展而透明扩展的方式来表达程序。
 
@@ -52,7 +55,9 @@ CUDA 编程模型中有三个关键抽象：
 [流式多处理器 (Streaming Multiprocessor)](/gpu-glossary/device-hardware/streaming-multiprocessor)）
 的新 GPU 上执行时，更多的这些线程块可以并行执行。
 
-![一个包含八个[线程块](/gpu-glossary/device-software/thread-block)的 CUDA 程序在两个[流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor) 的 GPU 上分四个顺序步骤（波次）运行，但在拥有两倍数量 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) 的 GPU 上，步骤数减少一半。修改自 [CUDA 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)。](../images/wave-scheduling.svg)
+![](https://files.mdnice.com/user/59/aa15f43d-3eaf-4e65-b945-b238c6c9917b.png)
+
+> 一个包含八个[线程块](/gpu-glossary/device-software/thread-block)的 CUDA 程序在两个[流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor) 的 GPU 上分四个顺序步骤（波次）运行，但在拥有两倍数量 [SM](/gpu-glossary/device-hardware/streaming-multiprocessor) 的 GPU 上，步骤数减少一半。修改自 [CUDA 编程指南](https://docs.nvidia.com/cuda/cuda-c-programming-guide/
 
 CUDA 编程模型的抽象概念通过扩展高级 CPU 编程语言（例如
 [C++ 的 CUDA C++ 扩展](/gpu-glossary/host-software/cuda-c)）提供给程序员。该编程模型在软件层面通过指令集架构

@@ -9,7 +9,9 @@ title: 什么是 CUDA 驱动 API？
 
 [CUDA 驱动 API](https://docs.nvidia.com/cuda/cuda-driver-api/index.html) 是 NVIDIA CUDA 驱动的用户空间组件。它为熟悉 C 标准库的用户提供了实用工具：例如用于在 GPU 设备上分配[内存](/gpu-glossary/device-software/global-memory)的 `cuMalloc` 函数。
 
-![CUDA 工具包。CUDA 驱动 API 位于应用程序或其他工具包组件与 GPU 之间。改编自《Professional CUDA C Programming Guide》。](https://modal.com/_next/image?url=%2Fgpu-glossary%2Fcuda-toolkit.svg&w=1920&q=75)
+![](https://files.mdnice.com/user/59/3bd3f864-14f2-4025-8c94-df57c6ea7302.png)
+
+> CUDA 工具包。CUDA 驱动 API 位于应用程序或其他工具包组件与 GPU 之间。改编自《Professional CUDA C Programming Guide》。
 
 很少有 CUDA 程序直接使用 CUDA 驱动 API 编写，它们通常使用 [CUDA 运行时 API](/gpu-glossary/host-software/cuda-runtime-api)。请参阅 CUDA 驱动 API 文档中的[此章节](https://docs.nvidia.com/cuda/cuda-driver-api/driver-vs-runtime-api.html#driver-vs-runtime-api)。
 

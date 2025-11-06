@@ -9,7 +9,9 @@ title: 什么是线程束调度器？
 
 线程束调度器是[流式多处理器 (SM)](/gpu-glossary/device-hardware/streaming-multiprocessor)的核心组件，负责在每个时钟周期决定执行哪一组[线程](/gpu-glossary/device-software/thread)。
 
-![H100 SM 内部架构图。橙色部分为线程束调度器和分发单元。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。](../images/gh100-sm.svg)
+![](https://files.mdnice.com/user/59/24190e9b-c268-40b0-b7e0-116a7034c57c.png)
+
+> H100 SM 内部架构图。橙色部分为线程束调度器和分发单元。改编自 NVIDIA 的 [H100 白皮书](https://modal-cdn.com/gpu-glossary/gtc22-whitepaper-hopper.pdf)。
 
 这些被称为[线程束](/gpu-glossary/device-software/warp)的线程组会在每个时钟周期（约一纳秒）进行切换——类似于 CPU 中同步多线程（"超线程"）的细粒度线程级并行处理，但规模更为庞大。线程束调度器能够在指令操作数就绪时快速切换大量并发任务，这种能力是实现 GPU [延迟隐藏](/gpu-glossary/perf/latency-hiding)特性的关键所在。
 
