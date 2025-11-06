@@ -74,17 +74,27 @@ python translate_with_ai.py
 
 ### 5. 生成 HTML 网站
 
+#### 生成本地测试版本（推荐）
+
+```bash
+python generate_website_local.py
+```
+
+这会生成不带 GitHub Pages base path 的版本，适合本地测试。
+
+#### 生成 GitHub Pages 版本
+
 ```bash
 python generate_website.py
 ```
+
+这会生成带有 `/gpu-glossary-zh/` base path 的版本，适合 GitHub Pages 部署。
 
 生成的静态网站会保存到 `website/` 目录。
 
 ### 6. 查看网站
 
-打开 `website/index.html` 在浏览器中查看。
-
-或者使用Python启动本地服务器:
+启动本地服务器:
 
 ```bash
 cd website
@@ -92,6 +102,8 @@ python -m http.server 8000
 ```
 
 然后访问 http://localhost:8000
+
+> **注意**: 如果使用 `generate_website.py` 生成的版本，本地查看时导航链接会失效，这是正常的，因为它是为 GitHub Pages 优化的。使用 `generate_website_local.py` 生成本地测试版本即可。
 
 ## 🌐 GitHub Pages 部署
 

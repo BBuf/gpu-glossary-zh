@@ -3,6 +3,7 @@
 生成 GPU Glossary 中文版静态网站
 """
 
+import os
 import re
 import markdown
 from pathlib import Path
@@ -12,9 +13,10 @@ from typing import Dict, List, Tuple
 class WebsiteGenerator:
     """静态网站生成器"""
     
-    def __init__(self, input_dir: Path, output_dir: Path):
+    def __init__(self, input_dir: Path, output_dir: Path, base_path: str = "/gpu-glossary-zh/"):
         self.input_dir = input_dir
         self.output_dir = output_dir
+        self.base_path = base_path  # GitHub Pages 的基础路径
         self.nav_structure = self._build_nav_structure()
     
     def _build_nav_structure(self) -> List[Dict]:
@@ -377,7 +379,8 @@ class WebsiteGenerator:
             
             if item.get('children'):
                 html.append(f'<li>')
-                html.append(f'<a href="{path}.html">{title}</a>')
+                # 使用绝对路径（带 base_path）
+                html.append(f'<a href="{self.base_path}{path}.html">{title}</a>')
                 html.append('<ul>')
                 
                 for child in item['children']:
@@ -385,13 +388,15 @@ class WebsiteGenerator:
                     child_title = child['title']
                     is_child_current = (child_path == current_path)
                     style = ' style="color: #58a6ff; font-weight: bold;"' if is_child_current else ''
-                    html.append(f'<li><a href="../{child_path}.html"{style}>{child_title}</a></li>')
+                    # 使用绝对路径（带 base_path）
+                    html.append(f'<li><a href="{self.base_path}{child_path}.html"{style}>{child_title}</a></li>')
                 
                 html.append('</ul>')
                 html.append('</li>')
             else:
                 style = ' style="color: #58a6ff; font-weight: bold;"' if is_current else ''
-                html.append(f'<li><a href="{path}.html"{style}>{title}</a></li>')
+                # 使用绝对路径（带 base_path）
+                html.append(f'<li><a href="{self.base_path}{path}.html"{style}>{title}</a></li>')
         
         html.append("</ul>")
         return '\n'.join(html)
@@ -516,7 +521,12 @@ def main():
         print("请先运行翻译脚本")
         return
     
-    generator = WebsiteGenerator(input_dir, output_dir)
+    # 从环境变量读取 base_path，用于 GitHub Pages 部署
+    # 本地开发时设置为空字符串，GitHub Actions 时设置为仓库名
+    base_path = os.getenv('GITHUB_PAGES_BASE', '/gpu-glossary-zh/')
+    print(f"Base path: {base_path}")
+    
+    generator = WebsiteGenerator(input_dir, output_dir, base_path)
     generator.generate_all()
 
 
