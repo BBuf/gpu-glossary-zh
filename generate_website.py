@@ -321,6 +321,31 @@ class WebsiteGenerator:
             color: #8b949e;
         }}
         
+        /* 图片容器样式 */
+        .image-container {{
+            margin: 30px 0;
+            text-align: center;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+        }}
+        
+        .image-container img {{
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }}
+        
+        .image-caption {{
+            margin-top: 15px;
+            color: #8b949e;
+            font-size: 0.9em;
+            font-style: italic;
+            line-height: 1.5;
+        }}
+        
         .footer {{
             margin-top: 60px;
             padding-top: 20px;
@@ -443,6 +468,45 @@ class WebsiteGenerator:
         
         # 替换所有 href="/gpu-glossary/..." 的链接
         html = re.sub(r'href="(/gpu-glossary/[^"]+)"', fix_link, html)
+        
+        # 处理图片 + blockquote 组合（图片说明）
+        # 匹配：<p><img .../></p>\n<blockquote>...</blockquote>
+        def fix_image_with_caption(match):
+            alt_text = match.group(1) if match.group(1) else ""
+            img_url = match.group(2)
+            caption = match.group(3)  # blockquote 内的内容
+            
+            # 清理 caption 中的 <p> 标签
+            caption = re.sub(r'</?p>', '', caption).strip()
+            
+            return f'''<div class="image-container">
+    <img src="{img_url}" alt="{alt_text}" loading="lazy" />
+    <p class="image-caption">{caption}</p>
+</div>'''
+        
+        # 先处理图片+说明的组合
+        html = re.sub(
+            r'<p><img\s+alt="([^"]*)"\s+src="(https?://[^"]+)"\s*/></p>\s*<blockquote>\s*<p>(.*?)</p>\s*</blockquote>',
+            fix_image_with_caption,
+            html,
+            flags=re.DOTALL
+        )
+        
+        # 处理没有说明的单独图片
+        def fix_image_without_caption(match):
+            alt_text = match.group(1) if match.group(1) else ""
+            img_url = match.group(2)
+            
+            return f'''<div class="image-container">
+    <img src="{img_url}" alt="{alt_text}" loading="lazy" />
+    {f'<p class="image-caption">{alt_text}</p>' if alt_text else ''}
+</div>'''
+        
+        html = re.sub(
+            r'<p><img\s+alt="([^"]*)"\s+src="(https?://[^"]+)"\s*/></p>',
+            fix_image_without_caption,
+            html
+        )
         
         return html
     
