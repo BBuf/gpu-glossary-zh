@@ -9,7 +9,9 @@ title: 什么是线程束执行状态？
 
 运行[内核](/gpu-glossary/device-software/kernel)的[线程束](/gpu-glossary/device-software/warp)状态可通过多个非互斥的形容词来描述：活跃的、停滞的、符合条件的和被选中的。
 
-![线程束执行状态通过颜色表示。图表灵感来源于 GTC 2025 的 [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) 演讲。](../images/cycles.svg)
+![](https://files.mdnice.com/user/59/34f2af6b-b744-4fe2-9880-8883c5f83b38.png)
+
+> 线程束执行状态通过颜色表示。图表灵感来源于 GTC 2025 的 [*CUDA Techniques to Maximize Compute and Instruction Throughput*](https://www.nvidia.com/en-us/on-demand/session/gtc25-s72685/) 演讲。
 
 从[线程](/gpu-glossary/device-software/thread)开始执行，到[线程束](/gpu-glossary/device-software/warp)中的所有[线程](/gpu-glossary/device-software/thread)都从[内核](/gpu-glossary/device-software/kernel)退出为止，该[线程束](/gpu-glossary/device-software/warp)被认为是*活跃的*。活跃的[线程束](/gpu-glossary/device-software/warp)构成了一个资源池，[线程束调度器](/gpu-glossary/device-hardware/warp-scheduler)每个周期从中选择候选者来发射指令（即放入某个发射槽中）。
 
